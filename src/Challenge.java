@@ -45,7 +45,16 @@ public class Challenge {
     
     // TODO: Implemente a condição necessário para a verificação dos cofres seguros:
     if (tipoCofre.equalsIgnoreCase("digital")) {
-
+      CofreDigital digital = new CofreDigital(scanner.nextInt());
+      digital.imprimirInformacoes();
+      if(digital.validarSenha(scanner.nextInt())){
+        System.out.println("Cofre aberto!");
+      }else{
+        System.out.println("Senha incorreta!");
+      }
+    }else if(tipoCofre.equalsIgnoreCase("fisico")){
+      CofreFisico fisico = new CofreFisico();
+      fisico.imprimirInformacoes();
     }    
     scanner.close();
   }
