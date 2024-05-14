@@ -35,6 +35,7 @@ public class RegistroTransacoesBancarias {
                 System.out.println("Opção inválida. Utilize D para depósito ou S para saque.");
                 i--; 
             }
+            scanner.close();
         }
 
         // Aqui é exibido o saldo final e a lista de transações ao final do processo:
