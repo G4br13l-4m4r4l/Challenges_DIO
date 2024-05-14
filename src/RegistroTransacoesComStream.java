@@ -32,14 +32,13 @@ public class RegistroTransacoesComStream {
         System.out.println("\nSaldo : " + saldo); 
         System.out.println("\nTransacoes:"); 
        // TODO: Crie um fluxo (stream) a partir da lista de transações:
-        //List<String> trasnsacoes2 = transacoes.stream().map(f->String.format("",f)).toList();
-        transacoes.forEach(System.out::println);
+      List<String> listaStream = transacoes.stream().map(t->t.getTipo()+" de "+ t.getValor()).collect(Collectors.toList());
      // TODO: Mapeie cada transação para uma string formatada:
                
     // TODO: Colete os elementos do fluxo em uma lista:
             
    // TODO: Para cada elemento da lista, imprime no console:
-        
+        listaStream.forEach(System.out::println);
 
         scanner.close(); 
     }
